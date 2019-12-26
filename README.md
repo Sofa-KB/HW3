@@ -16,6 +16,6 @@ Choose from the following password criteria:
 
   * Uppercase characters
 
-  ### This is for EDUCATIONAL purposes ONLY
+### This is for EDUCATIONAL purposes ONLY
 
-  Passwords created in this generator are NOT cryptographically secure. This application was created as a homework assignment for UCF Coding Bootcamp. The code utilizes the math.Random() function to pull random values and display a password. 
+Passwords created in this generator are NOT cryptographically secure. This application was created as a homework assignment for UCF Coding Bootcamp. The code utilizes the math.Random() function to pull random values and display a password. 
