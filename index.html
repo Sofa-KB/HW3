@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/1f42ba01ff.js" crossorigin="anonymous"></script>
     <title>Password Generator</title>
 </head>
+
 <body>
 
-<header class="header text-center">
-    <h1>Password Generator</h1>
-</header>
-<div class="container">
-    <div class="card">
+    <header class="header text-center">
+        <h1>Password Generator</h1>
+    </header>
 
-    <h2>Generate Password</h2>
-    </div>
+    <div class="container">
 
-</div>
-</div>
+        <h2 class="text-center">Generated Password</h2>
 
-<div class="text-center">
-<button id="password" type="button" class="btn btn-danger">Generate Password <i class="fas fa-key"></i></button>
-<button id="clipboard" type="button" class="btn btn-secondary">Copy to Clipboard <i class="far fa-clipboard"></i></button>
-</div>
-    
+        <br>
 
-<script src="assets/scripts/script.js"></script>
+        <span id="displayBox"></span>
+
+        <br>
+        <br>
+
+        <div class="text-center">
+            <input type="number" id="pwLength" min="8" max="128" value="8"><br>
+            <input type="checkbox" id="uppercase"> Include upper Case<br>
+            <input type="checkbox" id="lowercase"> Include lower Case<br>
+            <input type="checkbox" id="numbers"> Include numbers<br>
+            <input type="checkbox" id="symbols"> Include symbols<br>
+        </div>
+
+        <div class="text-center">
+            <button id="password" type="button" class="btn btn-danger">Generate Password <i
+                    class="fas fa-key"></i></button>
+            <button id="clipboard" type="button" class="btn btn-secondary">Copy to Clipboard <iclass="far fa-clipboard">
+                    </i></button>
+        </div>
+
+
+        <script src="assets/scripts/script.js"></script>
+
 </body>
+
 </html>
