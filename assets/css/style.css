@@ -1,9 +1,7 @@
 body {
     background-color: #dddddd;
 }
-.border {
-    border-style: dotted 1px #888888;
-}
+
 .card {
     width: 960px;
     padding-top: 20px;

@@ -5,9 +5,9 @@ var lower   = ["abcdefghijklmnopqrstuvwxyz"];
 var numbers = ["1234567890"];
 var symbols = ["!@#$%^&*()_+?><"];
 
-var pw = '';
-
 function createPW(pwLength, characters){ 
+
+var pw = '';
 
 do {
     pwLength = parseInt(prompt("Enter a value between 8 and 128"));
@@ -56,9 +56,14 @@ do {
 
 
     for (var i = 0; i < pwLength; i++){
-        pw += characters.charAt(Math.floor(Math.random() * characters.length))
+        pw += characters.charAt(Math.floor(Math.random() * characters.length));
     }
-    return pw;
+
+    document.getElementById("displayBox").innerText = pw; 
+    
 }  
 
-console.log(pw)
+function clipboard() {
+    var copyText = document.getElementById("displayBox");
+    navigator.clipboard.writeText(copyText.innerText);
+}
