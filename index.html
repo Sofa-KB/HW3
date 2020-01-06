@@ -18,33 +18,34 @@
     </header>
 
     <div class="container">
+        <div class="border">
+            <div class="card">
 
-        <h2 class="text-center">Generated Password</h2>
+                <h2 class="text-center">Generated Password</h2>
 
-        <br>
+                <br>
 
-        <span id="displayBox"></span>
+                <div class="text-center">
+                    <span id="displayBox"></span>
+                </div>
 
-        <br>
-        <br>
+                <br>
+                <br>
 
-        <div class="text-center">
-            <input type="number" id="pwLength" min="8" max="128" value="8"><br>
-            <input type="checkbox" id="uppercase"> Include upper Case<br>
-            <input type="checkbox" id="lowercase"> Include lower Case<br>
-            <input type="checkbox" id="numbers"> Include numbers<br>
-            <input type="checkbox" id="symbols"> Include symbols<br>
-        </div>
-
-        <div class="text-center">
-            <button id="password" type="button" class="btn btn-danger">Generate Password <i
-                    class="fas fa-key"></i></button>
-            <button id="clipboard" type="button" class="btn btn-secondary">Copy to Clipboard <iclass="far fa-clipboard">
-                    </i></button>
+                <div class="text-center">
+                    <button id="password" type="button" class="btn btn-danger" onclick="createPW()">Generate Password
+                        <i class="fas fa-key"></i></button>
+                    <button id="clipboard" type="button" class="btn btn-secondary" onclick="clipboard()">Copy to
+                        Clipboard
+                        <i class="far fa-clipboard"></i></button>
+                </div>
+            </div>
         </div>
 
 
         <script src="assets/scripts/script.js"></script>
+        
+
 
 </body>
 

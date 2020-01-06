@@ -1,11 +1,64 @@
-var upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-var lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-var numbers = ["1","2","3","4","5","6","7","8","9","0"]
-var symbols = ["!","@","#","$","%","^","&","*","(",")","-","+","<",">"]
+var password;
 
-function getUpper() {
-    return String.indexOf(Math.floor(Math.random) * 26)
+var upper   = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var lower   = ["abcdefghijklmnopqrstuvwxyz"];
+var numbers = ["1234567890"];
+var symbols = ["!@#$%^&*()_+?><"];
+
+var pw = '';
+
+function createPW(pwLength, characters){ 
+
+do {
+    pwLength = parseInt(prompt("Enter a value between 8 and 128"));
+
+if (isNaN(pwLength)) {
+    alert("ERROR: Please enter a value between 8 and 128!");
+    pwLength = 0;
+    }
+
+else if (pwLength < 8 || pwLength > 128) {
+    alert("ERROR: Please enter a value between 8 and 128!")
+    } 
+}
+
+while (pwLength < 8 || pwLength > 128);
+
+var characters = '';
+
+do {
+    hasSymbols = confirm("Include symbols? OK for Yes, Cancel for No");
+    hasNumbers = confirm("Include numbers? OK for Yes, Cancel for No");
+    hasLower   = confirm("Include lower case? OK for Yes, Cancel for No");
+    hasUpper   = confirm("Include upper case? OK for Yes, Cancel for No");
     
-    console.log(getUpper())
+    var accept = hasSymbols || hasNumbers || hasLower || hasUpper;
+    if (!accept) {
+        alert("Error: Please select at least one character type!")
+            }
+        } while (!accept);
+    
+            if (hasSymbols) {
+                characters += symbols;
+            }
+    
+            if (hasNumbers) {
+                characters += numbers;
+            }
+    
+            if (hasLower) {
+                characters += lower;
+            }
+    
+            if (hasUpper) {
+                characters += upper;
+            }
 
-}    
+
+    for (var i = 0; i < pwLength; i++){
+        pw += characters.charAt(Math.floor(Math.random() * characters.length))
+    }
+    return pw;
+}  
+
+console.log(pw)
