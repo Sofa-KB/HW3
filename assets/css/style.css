@@ -20,3 +20,10 @@ body {
     .card {
         width: 95%;
     }
+
+@media screen and (max-width: 432px) {
+
+    .btn {
+        width: 45%;
+        font-size: 12px;
+    }
